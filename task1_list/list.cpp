@@ -6,7 +6,13 @@
 List* initList(void)
 {
 	List* pRoot = (List*)malloc(sizeof(*pRoot));
-	
+
+    if (NULL == pRoot)
+    {
+           std::cout << "Puste" << std::endl;
+           return NULL;
+    }
+
 	return pRoot;
 }
 
@@ -18,7 +24,7 @@ void deinitList(List* pRoot)
 
 void addCar(List* pRoot, char* plateNum)
 {
-
+    
 }
 
 void removeCar(List* pRoot, char* plateNum)
@@ -26,7 +32,6 @@ void removeCar(List* pRoot, char* plateNum)
 
 }
 void printAll(List* pRoot) {
-
 }
 
 int numberOfElements(List* pRoot)
